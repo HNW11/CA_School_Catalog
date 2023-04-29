@@ -73,10 +73,9 @@ class HighSchool(School):
   #Create repr
   def __repr__(self):
     schoolRepr = super().__repr__()
-    return schoolRepr + " We offer a multitude of sports including: {}".format(self.sportsTeams)
+    return schoolRepr + f"The {self.name}" + f" sports teams inlcude: {', '.join(self.sportsTeams)}."
 
 #Test High School Class
-sports_teams = 'Tennis, Basketball, Football, Soccer'
-test3 = HighSchool('North High School', 798, sports_teams)
+test3 = HighSchool('North High School', 798, ['Tennis', 'Basketball', 'Football', 'Soccer'])
 print(test3.get_sportsTeams())
 print(test3)     #Works
